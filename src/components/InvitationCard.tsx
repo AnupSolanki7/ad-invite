@@ -1,5 +1,6 @@
 "use client";
 
+import { ScriptName } from "@/components/ScriptName";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import {
@@ -87,7 +88,7 @@ export default function InvitationCard() {
           </motion.h2>
 
           <motion.div variants={fadeUp} className="mt-7 flex flex-col items-center">
-            <span className="text-foil-dark px-3 font-script text-[64px] leading-[1.05] sm:text-[84px]">{couple.bride}</span>
+            <span className="text-foil-dark px-3 font-script text-[64px] leading-[1.05] sm:text-[84px]"><ScriptName name={couple.bride} /></span>
             <span className="my-1 flex items-center gap-3 font-serif text-2xl italic text-gold-dark">
               <span className="h-px w-10 bg-gradient-to-r from-transparent to-gold" />
               &amp;

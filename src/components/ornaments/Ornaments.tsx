@@ -181,23 +181,23 @@ export function Monogram({
         <path d="M80 4c4 4 4 8 0 11-4-3-4-7 0-11Z" />
       </g>
       <text
-        x="61"
-        y="98"
+        x="57"
+        y="101"
         textAnchor="middle"
         fill={fill}
-        style={{ fontFamily: "var(--ff-script)", fontSize: 58 }}
+        style={{ fontFamily: "var(--ff-cormorant)", fontSize: 50, fontStyle: "italic", fontWeight: 500 }}
       >
         {first}
       </text>
-      <text x="80" y="88" textAnchor="middle" fill={fill} style={{ fontFamily: "var(--ff-cormorant)", fontSize: 16, fontStyle: "italic" }}>
+      <text x="80" y="92" textAnchor="middle" fill={fill} style={{ fontFamily: "var(--ff-cormorant)", fontSize: 16, fontStyle: "italic" }}>
         &amp;
       </text>
       <text
-        x="101"
-        y="104"
+        x="103"
+        y="101"
         textAnchor="middle"
         fill={fill}
-        style={{ fontFamily: "var(--ff-script)", fontSize: 58 }}
+        style={{ fontFamily: "var(--ff-cormorant)", fontSize: 50, fontStyle: "italic", fontWeight: 500 }}
       >
         {second}
       </text>

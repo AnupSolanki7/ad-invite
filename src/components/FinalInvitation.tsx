@@ -1,5 +1,6 @@
 "use client";
 
+import { ScriptName } from "@/components/ScriptName";
 import { motion } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import { GoldDust } from "./FloatingDecorations";
@@ -54,7 +55,7 @@ export default function FinalInvitation({ onReplay }: { onReplay: () => void }) 
             <GoldDivider className="w-full" />
           </motion.div>
           <motion.p variants={fadeUp} className="mt-6 flex flex-col items-center font-script text-[56px] leading-[1.1] sm:flex-row sm:justify-center sm:gap-4 sm:text-7xl">
-            <span className="text-foil px-2">{couple.bride}</span>
+            <span className="text-foil px-2"><ScriptName name={couple.bride} /></span>
             <span className="font-serif text-3xl italic text-gold-light sm:text-4xl">&amp;</span>
             <span className="text-foil px-2">{couple.groom}</span>
           </motion.p>

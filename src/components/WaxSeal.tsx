@@ -41,20 +41,20 @@ function SealFace({ first, second }: { first: string; second: string }) {
       {[0, 90, 180, 270].map((r) => (
         <path key={r} transform={`rotate(${r} 60 60)`} d="M60 18c2.5 2 2.5 5 0 7-2.5-2-2.5-5 0-7Z" fill={`url(#${gold})`} />
       ))}
-      <g style={{ fontFamily: "var(--ff-script)" }} textAnchor="middle">
-        <text x="47" y="71" fontSize="34" fill="#2a0408" opacity=".5">
+      <g style={{ fontFamily: "var(--ff-monogram), cursive" }} textAnchor="middle">
+        <text x="45" y="74" fontSize="30" fill="#2a0408" opacity=".5">
           {first}
         </text>
-        <text x="46" y="70" fontSize="34" fill={`url(#${gold})`}>
+        <text x="44" y="73" fontSize="30" fill={`url(#${gold})`}>
           {first}
         </text>
-        <text x="60" y="66" fontSize="13" fill={`url(#${gold})`} style={{ fontFamily: "var(--ff-cormorant)", fontStyle: "italic" }}>
+        <text x="60" y="68" fontSize="13" fill={`url(#${gold})`} style={{ fontFamily: "var(--ff-cormorant)", fontStyle: "italic" }}>
           &amp;
         </text>
-        <text x="75" y="77" fontSize="34" fill="#2a0408" opacity=".5">
+        <text x="77" y="74" fontSize="30" fill="#2a0408" opacity=".5">
           {second}
         </text>
-        <text x="74" y="76" fontSize="34" fill={`url(#${gold})`}>
+        <text x="76" y="73" fontSize="30" fill={`url(#${gold})`}>
           {second}
         </text>
       </g>

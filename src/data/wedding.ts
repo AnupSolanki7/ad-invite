@@ -31,8 +31,6 @@ export interface WeddingEvent {
   /** ISO 8601 with the IST offset so every guest sees the same moment. */
   startsAt: string;
   venue: { name: string; address: string; mapUrl: string };
-  dressCode: string;
-  swatches: string[];
   image: ImageAsset;
 }
 
@@ -77,8 +75,6 @@ export const wedding = {
         address: "Necklace Point, Bhor.",
         mapUrl: "https://share.google/anKyk9ypxkrBqEaQl",
       },
-      dressCode: "Traditional Yellow",
-      swatches: ["#E9AD24", "#F6C33A", "#D9661A", "#3F6B2A"],
       image: {
         src: "/assets/events/haldi.svg",
         alt: "Illustration of the couple at their Haldi ceremony beneath marigold strings",
@@ -103,8 +99,6 @@ export const wedding = {
         address: "Katraj, Pune.",
         mapUrl: "https://share.google/f6AIbZEV6LbjgTxxf",
       },
-      dressCode: "Maharashtrian Elegance",
-      swatches: ["#1D6B45", "#D14F7F", "#D6AC52", "#F3E6C8"],
       image: {
         src: "/assets/events/vaidik-vivah.svg",
         alt: "Illustration of the bride in a green Paithani saree and the groom in a cream kurta beneath the mandap",
@@ -126,8 +120,6 @@ export const wedding = {
         // Same venue as the Vaidik Vivah, so it shares that map link.
         mapUrl: "https://share.google/f6AIbZEV6LbjgTxxf",
       },
-      dressCode: "Festive Glamour",
-      swatches: ["#B0122B", "#E8A0A0", "#D6AC52", "#FBF1DD"],
       image: {
         src: "/assets/events/varmala.svg",
         alt: "Illustration of the couple exchanging garlands under a floral arch at sunset",

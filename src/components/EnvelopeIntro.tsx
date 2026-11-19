@@ -1,5 +1,6 @@
 "use client";
 
+import { ScriptName } from "@/components/ScriptName";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -223,7 +224,7 @@ export default function EnvelopeIntro({ replay = false, onCovered, onReveal, onD
                   <span className="font-devanagari text-[3.6cqw] text-maroon/80">{wedding.invocationDevanagari}</span>
                   <span className="text-foil-dark mt-[2%] font-cinzel text-[3cqw] tracking-[0.3em]">The wedding of</span>
                   <span className="mt-[1%] font-script text-[10cqw] leading-none text-maroon">
-                    {couple.bride} <span className="text-[6cqw] text-gold">&amp;</span> {couple.groom}
+                    <ScriptName name={couple.bride} /> <span className="text-[6cqw] text-gold">&amp;</span> {couple.groom}
                   </span>
                   <span className="mt-[2%] font-devanagari text-[4cqw] text-gold-dark">शुभविवाह</span>
                 </span>
@@ -293,7 +294,7 @@ export default function EnvelopeIntro({ replay = false, onCovered, onReveal, onD
           </p>
           <h1 data-intro="line" className="mt-2 px-2 font-script text-[44px] leading-tight opacity-0 sm:text-6xl">
             <span className="text-foil">
-              {couple.bride} <span className="font-serif text-3xl italic sm:text-4xl">&amp;</span> {couple.groom}
+              <ScriptName name={couple.bride} /> <span className="font-serif text-3xl italic sm:text-4xl">&amp;</span> {couple.groom}
             </span>
           </h1>
           <button

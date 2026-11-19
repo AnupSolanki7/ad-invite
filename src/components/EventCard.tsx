@@ -298,15 +298,6 @@ export default function EventCard({ event, index }: { event: WeddingEvent; index
               ))}
             </motion.dl>
 
-            <motion.div variants={fadeUp} className={`mt-7 inline-flex items-center gap-3 rounded-full border px-4 py-2 ${t.chip}`}>
-              <span className="flex -space-x-1.5" aria-hidden>
-                {event.swatches.map((c) => (
-                  <span key={c} className="h-4 w-4 rounded-full border border-white/70 shadow-sm" style={{ background: c }} />
-                ))}
-              </span>
-              <span className="font-cinzel text-[10px] font-semibold tracking-[0.22em] sm:text-[11px]">THEME: {event.dressCode.toUpperCase()}</span>
-            </motion.div>
-
             <motion.a
               variants={fadeUp}
               href={event.venue.mapUrl}

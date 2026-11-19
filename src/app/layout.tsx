@@ -20,6 +20,7 @@ const cinzel = localFont({
   display: "swap",
 });
 const script = localFont({ src: "./fonts/GreatVibes-Regular.woff2", weight: "400", variable: "--ff-script", display: "swap" });
+const monogram = localFont({ src: "./fonts/PinyonScript-Regular.woff2", weight: "400", variable: "--ff-monogram", display: "swap" });
 const lora = localFont({
   src: [
     { path: "./fonts/Lora-Variable.woff2", weight: "400 700", style: "normal" },
@@ -69,7 +70,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html
       lang="en-IN"
-      className={`${cormorant.variable} ${cinzel.variable} ${script.variable} ${lora.variable} ${gujarati.variable} ${devanagari.variable}`}
+      className={`${cormorant.variable} ${cinzel.variable} ${script.variable} ${monogram.variable} ${lora.variable} ${gujarati.variable} ${devanagari.variable}`}
     >
       <body>
         <noscript>
