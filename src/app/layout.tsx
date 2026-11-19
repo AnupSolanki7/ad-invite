@@ -1,27 +1,44 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Cormorant_Garamond, Great_Vibes, Lora, Noto_Serif_Gujarati, Tiro_Devanagari_Marathi } from "next/font/google";
+import localFont from "next/font/local";
 import { wedding } from "@/data/wedding";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+// Fonts are self-hosted from ./fonts (downloaded from Google Fonts) so the
+// build never depends on reaching fonts.googleapis.com.
+const cormorant = localFont({
+  src: [
+    { path: "./fonts/CormorantGaramond-Variable.woff2", weight: "300 700", style: "normal" },
+    { path: "./fonts/CormorantGaramond-Italic-Variable.woff2", weight: "300 700", style: "italic" },
+  ],
   variable: "--ff-cormorant",
   display: "swap",
 });
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--ff-cinzel", display: "swap" });
-const script = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--ff-script", display: "swap" });
-const lora = Lora({ subsets: ["latin"], style: ["normal", "italic"], variable: "--ff-lora", display: "swap" });
-const gujarati = Noto_Serif_Gujarati({
-  subsets: ["gujarati"],
-  weight: ["400", "500"],
+const cinzel = localFont({
+  src: "./fonts/Cinzel-Variable.woff2",
+  weight: "400 900",
+  variable: "--ff-cinzel",
+  display: "swap",
+});
+const script = localFont({ src: "./fonts/GreatVibes-Regular.woff2", weight: "400", variable: "--ff-script", display: "swap" });
+const lora = localFont({
+  src: [
+    { path: "./fonts/Lora-Variable.woff2", weight: "400 700", style: "normal" },
+    { path: "./fonts/Lora-Italic-Variable.woff2", weight: "400 700", style: "italic" },
+  ],
+  variable: "--ff-lora",
+  display: "swap",
+});
+const gujarati = localFont({
+  src: [
+    { path: "./fonts/NotoSerifGujarati-Regular.ttf", weight: "400" },
+    { path: "./fonts/NotoSerifGujarati-Medium.ttf", weight: "500" },
+  ],
   variable: "--ff-gujarati",
   display: "swap",
   preload: false,
 });
-const devanagari = Tiro_Devanagari_Marathi({
-  subsets: ["devanagari"],
+const devanagari = localFont({
+  src: "./fonts/TiroDevanagariMarathi-Regular.ttf",
   weight: "400",
   variable: "--ff-devanagari",
   display: "swap",
